@@ -5,8 +5,7 @@ namespace FileDataTest
 {
     [TestClass]
     public class FileTest
-    {
-        
+    {        
         [TestMethod]
         public void testVersion()
         {

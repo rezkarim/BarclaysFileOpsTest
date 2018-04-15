@@ -9,39 +9,36 @@ namespace FileData
 {
     public static class Program
     {
-        private static string cmd, fileName;
+        private static string fileCommand, fileName;
 
         public static void Main(string[] args)
         {
             IFileDetails fileOps = new FileOperations();
 
-            /*uncomment this block of code for test
-             
-            foreach (string arg in args)
-            {
-                cmd = arg;
-            }*/
+            /*test code - uncomment following two lines of code for test           
+                fileCommand = args[0];
+                fileName = args[1];*/
 
-            //comment out the following two lines if previous block of code is uncommented 
+            //comment out the following four lines if test code is uncommented 
             Console.WriteLine("Enter functionality command: ");
-            cmd = Console.ReadLine();
+            fileCommand = Console.ReadLine();
 
             Console.WriteLine("\r\nEnter the file name or path: ");
             fileName = Console.ReadLine();
 
-            if (cmd == "-v" || cmd == "--v" || cmd == "/v" || cmd == "--version")
+            if (fileCommand == "-v" || fileCommand == "--v" || fileCommand == "/v" || fileCommand == "--version")
             {
-                var version = fileOps.FileVersion(cmd);
-                Console.WriteLine("\r\n" + fileName + " - file version: " + version);
+                var fVersion = fileOps.FileVersion(fileCommand);
+                Console.WriteLine("\r\nOutput\r\n------\r\n" + fileName + " > version of file: " + fVersion + "\r\n\nPress any key...");
             }
-            else if (cmd == "-s" || cmd == "--s" || cmd == "/s" || cmd == "--size")
+            else if (fileCommand == "-s" || fileCommand == "--s" || fileCommand == "/s" || fileCommand == "--size")
             {
-                var size = fileOps.FileSize(cmd);
-                Console.WriteLine("\r\n" + fileName + " - file size: " + size);
+                var fSize = fileOps.FileSize(fileCommand);
+                Console.WriteLine("\r\nOutput\r\n------\r\n" + fileName + " > size of file: " + fSize + "\r\n\nPress any key...");
             }
             else
             {
-                Console.WriteLine("\r\n'" + cmd + "' is an invalid command!\r\n\nPress any key to quit...");
+                Console.WriteLine("\r\nOutput\r\n------\r\n'" + fileCommand + "' is an invalid command!\r\n\nPress any key...");
             }
 
             Console.ReadKey();            
