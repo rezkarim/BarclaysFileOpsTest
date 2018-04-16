@@ -21,3 +21,6 @@
 # Code analysis files
 *.CodeAnalysisLog.xml
 *.lastcodeanalysissucceeded
+/.vs/FileData/v14
+/packages/NUnit.3.10.1
+/TestResults/ec8b4330-0e86-4ba9-b315-05bb0a19e081/md.rezaul.r.karim_CPX-QIV4TSJU02N 2018-04-13 15_16_48.coverage

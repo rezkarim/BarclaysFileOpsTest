@@ -26,10 +26,6 @@ namespace FileData
             Console.WriteLine("\r\nEnter the file name or path: ");
             fileName = Console.ReadLine();
 
-            ///<summary>
-            ///following block of if-else statements decide which file operation to be performed
-            ///based on input provided
-            ///</summary>
             if (fileCommand == "-v" || fileCommand == "--v" || fileCommand == "/v" || fileCommand == "--version")
             {
                 var fVersion = fileOps.FileVersion(fileCommand);
