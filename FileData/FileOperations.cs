@@ -23,7 +23,7 @@ namespace FileData
         }
 
         /// <summary>
-        /// this function returns version of file based on input
+        /// this function returns size of file based on input
         /// value for cmdSize
         /// </summary>
         
